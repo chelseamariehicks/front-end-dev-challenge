@@ -4,12 +4,33 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <title>Test Chart</title>
   <script type='module' src='./challenge-chart.js'></script>
+  <script type='module' src='../../ChallengeDataService.js'></script>
 </head>
 <body>
-  <div style='height:500px;width:500px;'>
-    <challenge-chart></challenge-chart>
+  <div class="container" style="max-width: 700px;margin:auto">
+    <h1 class="display-3" style="margin-left:25px;margin-bottom:20px">Challenge Display Data</h1>
+    <div class="container-lg" style="margin-left:20px;margin-bottom:20px;">
+      <button id="small" type="button" class="btn btn-primary" style="margin-left:100px">Small</button>
+      <button id="medium" type="button" class="btn btn-primary" style="margin-left:20px">Medium</button>
+      <button id="large" type="button" class="btn btn-primary" style="margin-left:20px">Large</button>
+    </div>
+    <div>
+      <button id="reset" type="button" class="btn btn-secondary" style="margin-left:210px; margin-bottom:20px" onclick="history.go(0)">Clear Data</button>
+    </div>
+    <div style='height:500px;width:500px;margin-left:30px; margin-bottom:-200px'>
+      <challenge-chart></challenge-chart>
+    </div>
   </div>
+  <div class="container-lg">
+    <table class="table">
+    <!--Data table will go here-->
+    </table>
+  </div>
+  
+  <script type="module" src='./displayData.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
